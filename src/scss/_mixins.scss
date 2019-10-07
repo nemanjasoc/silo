@@ -1,0 +1,246 @@
+@mixin background-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+@mixin transition-vendors($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+@mixin box-shadow-vendors {
+    box-shadow: 0 1px 7px 0px black;
+    -webkit-box-shadow: 0 1px 7px 0px black;
+    -moz-box-shadow: 0 1px 7px 0px black;
+    -o-box-shadow: 0 1px 7px 0px black;
+}
+
+@mixin content-position {
+    position: absolute;
+    background-color: #dbe4f0a3;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    padding: 15px 0;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin log-out-button {
+    height: 32px;
+    width: 140px;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    @include box-shadow-vendors;
+    @include transition-vendors(background-color 0.3s);
+}
+
+@mixin green-button {
+    height: 45px;
+    background: #16a63e;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    @include box-shadow-vendors;
+    @include transition-vendors(background-color 0.3s);
+}
+
+@mixin table-title {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 100px;
+    background-color: #435d7d;
+    color: #fff;
+    padding: 15px 0 15px 35px;
+    font-family: auto;
+}
+
+@mixin table-th {
+    vertical-align: middle;
+    border-bottom: 3px solid #dee2e6;
+    outline: none;
+    background: #fff;
+}
+
+@mixin table-td {
+    vertical-align: middle;
+    color: #435d7d;
+}
+
+@mixin sort-arrow {
+    display: inline-block;
+    margin-left: 0px;
+    width: 0px;
+    font-size: inherit;
+    line-height: inherit;
+    opacity: 1;
+    content: "\2195";
+}
+
+@mixin table-input {
+    border: none;
+    outline: none;
+    line-height: 38px;
+    background-color: transparent;
+    border-bottom: 1px solid #435d7d;
+    padding-left: 5px;
+    font-size: 17px;
+    color: #435d7d;
+    @include transition-vendors(border-bottom 1s ease-out);
+}
+
+@mixin status {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 17px; 
+}
+
+@mixin header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #435d7d;
+    align-items: center;
+    margin-top: 100px;
+}
+
+@mixin header-title {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    padding: 15px 0 15px 35px;
+    font-family: auto;
+}
+
+@mixin add-button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #5cb85c;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    width: 145px;
+    height: 30px;
+    margin-right: 35px;
+}
+
+@mixin edit-pencil {
+    position: relative;
+    display: inline-block;
+    color: #ffC107;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+@mixin trash-delete {
+    position: relative;
+    display: inline-block;
+    color: #f44336;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@mixin edit-tooltip {
+    visibility: hidden;
+    width: 45px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1;
+    bottom: 145%;
+    left: 50%;
+    margin-left: -22px;
+}
+
+@mixin edit-tooltip-after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+@mixin delete-tooltip {
+    visibility: hidden;
+    width: 58px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1;
+    bottom: 145%;
+    left: 50%;
+    margin-left: -30px;
+}
+
+@mixin delete-tooltip-after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+@mixin input-text-number {
+    max-width: 340px;
+    width: 100%;
+    border: none;
+    line-height: 38px;
+    background-color: transparent;
+    border-bottom: 1px solid #435d7d;
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+@mixin modal-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+@mixin modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
