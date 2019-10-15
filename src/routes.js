@@ -6,7 +6,7 @@ import Silos from './components/tables/Silos.vue';
 import Users from './components/tables/Users.vue';
 import Feed from './components/tables/Feed.vue';
 import Customer from './components/tables/Customer.vue';
-import Installer from './components/tables/installer.vue';
+import Installer from './components/tables/Installer.vue';
 import store from './store/store';
 
 export const routes = [
