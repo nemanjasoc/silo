@@ -16,7 +16,7 @@
     "bootstrap-vue": "^2.0.0-rc.27",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "vue": "^2.6.10",
     "vue-json-csv": "^1.2.5",
     "vue-router": "^3.0.7",
